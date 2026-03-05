@@ -1,0 +1,116 @@
+/* الخطوط والألوان */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    transition: 0.4s;
+    background: #fefefe;
+    color: #222;
+}
+
+/* الوضع الداكن */
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+/* الهيدر */
+header {
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* قائمة الأنبياء */
+.prophets-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+}
+
+.prophets-list button {
+    background: #4caf50;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.prophets-list button:hover {
+    transform: scale(1.1);
+    background: #81c784;
+}
+
+/* عرض النبوة */
+.display-area {
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+    max-width: 800px;
+    margin: auto;
+}
+
+.display-area img {
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+}
+
+.display-area img:hover {
+    transform: scale(1.05);
+}
+
+/* الفوتر */
+footer {
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* تأثير fadeIn */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* متجاوب */
+@media (max-width: 600px) {
+    .display-area img {
+        width: 180px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
